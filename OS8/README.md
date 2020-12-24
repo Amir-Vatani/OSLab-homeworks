@@ -1,26 +1,26 @@
 1-
-ابتدا با دستورات زیر در git عملیات config را انجام میدهیم :
-git config --global user.email "email"
-git config --global user.name "username"
-برای این که هر بار برای push کردن نیاز به ایمیل و یوزر نیم نباشد کافیست بعد از config کردن دستورات زیر را وارد کنید :
-git config --global credential.helper cache
- با زدن این دستور به سادگی سیستم کش رو فعال کردید و گیت رو برای استفاده از حافظه نهان تنظیم کردید.
-حالا برای این که مقدار تایم اولیه کش رو بیشتر کنید دستور زیر رو بزنید:
-git config --global credential.helper 'cache --timeout=86400'
-با دستور بالا تایم کش رو روی 24 ساعت یعنی یک شبانه روز گذاشتیم. اینجوری وقتی سیستم شما 24 ساعت روشن باشه بعد از 24 ساعت باید یک بار نام کاربری و رمز عبور رو بزنید (در صورت restart کردن سیستم دوباره ازتون نام کاربری و رمز عبور را میخواهد)
+config on git :
+
+' git config --global user.email "email" ' 
+
+' git config --global user.name "username" '
+
+for using cache : 'git config --global credential.helper cache'
+
+for stored in cache for 24h : ' git config --global credential.helper 'cache --timeout=86400' '
 
 2-
-برای این منظور کافیست از دستور زیر استفاده کنید :
-ls -l
-سوئیچ  -l جزئیات لیست را به صورت طولانی تر یا long نمایش می دهد.
-سوئیچ بالا، حجم فایل ها را بر اساس بایت نمایش می دهد. برای نمایش حجم فایل ها به صورت کیلو بایت، می توانید از سوئیچ  -lh استفاده نمایید.
-برای نمایش کلیه فایل ها به همراه فایل های hidden می توانید از سوئیچ  -aاستفاده نمایید. در صورتی که داخل پنجره فایل منیجر می باشید، با زدن کلید های  ctrl + h می توانید فایل ها پنهان را نمایش داده یا آن ها را مخفی نمایید.
+lists the contents in a long format : 'ls -l'
 
+-l     use a long listing format
+   -h, --human-readable
+          with -l and/or -s, print human readable sizes (e.g., 1K 234M
+          2G)
 
 3-
-برای مشاهده مدت زمان آپ تایم یا روشن بودن سیستم باید از دستور uptime استفاده کنید.
-برای مشاهده مدت زمان بوت شدن سیستم عامل باید از دستور who -b استفاده کنید.
+for show uptime : 'uptime'
+time of last system boot uptime : 'who -b'
 
 4-
-برای بدست آوردن ip سیستم کافیست از دستور ip addr استفاده کنید.
-همچنین میتوان از دستور (حرف بزرگ)hostname -I استفاده کنید.
+To get the local ip of the system : 'ip addr'
+also you can use 'hostname -I'
